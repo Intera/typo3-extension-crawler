@@ -40,8 +40,11 @@ class tx_crawler_scheduler_imAdditionalFieldProvider implements tx_scheduler_Add
 	 * @return array
 	 */
 	public function getAdditionalFields(array &$taskInfo, $task, tx_scheduler_Module $schedulerModule) {
+		if ($task === NULL) {
+			$task = new stdClass();
+		}
 		$additionalFields = array();
-                 
+
 		if (empty($taskInfo['configuration'])) {
 			if ($schedulerModule->CMD == 'add') {
 				$taskInfo['configuration'] = array();
