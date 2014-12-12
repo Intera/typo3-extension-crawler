@@ -1,0 +1,10 @@
+{
+	"name": "intera-typo3-extension/crawler",
+	"description": "Libraries and scripts for crawling the TYPO3 page tree. Used for re-caching, re-indexing, publishing applications etc.",
+	"type": "typo3-cms-extension",
+	"version": "3.7.0",
+  	"licence": "GPL2+",
+  	"replace": {
+		"crawler": "self.version"
+	}
+}
